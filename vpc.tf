@@ -3,7 +3,7 @@ resource "aws_vpc" "my_vpc" {
   cidr_block = "10.0.0.0/16"
 
   tags = {
-    Name = "luqman-tf-vpc"
+    Name = "junjie-tf-vpc"
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_subnet" "my_public_subnet_az1" {
   availability_zone = "us-east-1a"
 
   tags = {
-    Name = "luqman-tf-public-subnet-az1"
+    Name = "junjie-tf-public-subnet-az1"
   }
 }
 
@@ -25,7 +25,7 @@ resource "aws_subnet" "my_private_subnet_az1" {
   availability_zone = "us-east-1a"
 
   tags = {
-    Name = "luqman-tf-private-subnet-az1"
+    Name = "junjie-tf-private-subnet-az1"
   }
 }
 
@@ -36,7 +36,7 @@ resource "aws_subnet" "my_public_subnet_az2" {
   availability_zone = "us-east-1b"
 
   tags = {
-    Name = "luqman-tf-public-subnet-az2"
+    Name = "junjie-tf-public-subnet-az2"
   }
 }
 
@@ -47,7 +47,7 @@ resource "aws_subnet" "my_private_subnet_az2" {
   availability_zone = "us-east-1b"
 
   tags = {
-    Name = "luqman-tf-private-subnet-az2"
+    Name = "junjie-tf-private-subnet-az2"
   }
 }
 
@@ -56,7 +56,7 @@ resource "aws_internet_gateway" "my_igw" {
   vpc_id = aws_vpc.my_vpc.id
 
   tags = {
-    Name = "luqman-tf-igw"
+    Name = "junjie-tf-igw"
   }
 }
 
@@ -66,7 +66,7 @@ resource "aws_vpc_endpoint" "vpces3" {
   service_name = "com.amazonaws.us-east-1.s3"
 
   tags = {
-    Name = "luqman-tf-vpce-s3"
+    Name = "junjie-tf-vpce-s3"
   }
 
   route_table_ids = [aws_route_table.my_private_route_table_az1.id, aws_route_table.my_private_route_table_az2.id]

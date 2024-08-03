@@ -14,7 +14,7 @@ resource "aws_route_table" "my_public_route_table" {
   }
 
   tags = {
-    Name = "luqman-tf-public-rtb"
+    Name = "junjie-tf-public-rtb"
   }
 
 }
@@ -29,7 +29,7 @@ resource "aws_route_table" "my_private_route_table_az1" {
   }
 
   tags = {
-    Name = "luqman-tf-private-rtb-az1"
+    Name = "junjie-tf-private-rtb-az1"
   }
 
 }
@@ -44,7 +44,7 @@ resource "aws_route_table" "my_private_route_table_az2" {
   }
 
   tags = {
-    Name = "luqman-tf-private-rtb-az2"
+    Name = "junjie-tf-private-rtb-az2"
   }
 
 }
