@@ -40,7 +40,8 @@ resource "aws_security_group" "ec2_sg" {
 # To overwrite any one particular variable, we can pass the variable at runtime during terraform apply step
 # e.g. terraform apply --var ec2_name="my-var-webserver"
 resource "aws_instance" "sample_ec2_variables" {
-  ami           = var.ami_id
+  #ami           = var.ami_id
+  ami = data.aws_ami.latest_ami.id
   instance_type = var.instance_type
   key_name      = var.key_name
   subnet_id     = aws_subnet.my_public_subnet_az1.id
