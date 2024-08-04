@@ -1,3 +1,4 @@
+/*
 ## Creates a public route table
 resource "aws_route_table" "my_public_route_table" {
   vpc_id = aws_vpc.my_vpc.id
@@ -70,3 +71,5 @@ resource "aws_route_table_association" "second_private_assoc" {
   subnet_id      = aws_subnet.my_private_subnet_az2.id
   route_table_id = aws_route_table.my_private_route_table_az2.id
 }
+
+*/
