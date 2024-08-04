@@ -20,9 +20,16 @@ module "web_server_sg" {
       cidr_blocks = "10.10.0.0/16"
     },
     {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      cidr_blocks = "0.0.0.0/0"
+    },
+    /*{
       rule        = "postgresql-tcp"
       cidr_blocks = "0.0.0.0/0"
     }
+    */
   ]
 
   egress_with_cidr_blocks = [
@@ -59,6 +66,23 @@ module "ec2_instance" {
     Environment = "dev"
     Name = var.ec2_name
   }
+
+   ## Additional Challenge 2 - Create EC2 with a User Data script / bootstrap script
+  # Define the user data script
+  user_data = <<-EOF
+    #!/bin/bash
+    yum update -y
+    yum install httpd -y
+    yum install docker -y
+    systemctl start httpd
+    systemctl enable httpd
+    usermod -a -G apache ec2-user
+    chown -R ec2-user:apache /var/www
+    chmod 2775 /var/www
+    find /var/www -type d -exec chmod 2775 {} \;
+    find /var/www -type f -exec chmod 0664 {} \;
+    echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+  EOF
 }
 
 /*
