@@ -1,4 +1,5 @@
 # aws-networking-and-compute-tf
+https://docs.google.com/document/d/16B-3PjDcs9KMMGMUVVTRbhgDr5ZCzTe68HPRWlW8I5s/edit
 
 # Learning Objectives:
 This assignment aims to create an EC2 instance, a VPC, and all necessary networking resources using Terraform. Additionally, the assignment explores retrieving the ami_id using a data block instead of hardcoding it in variables.tf. Another key objective is to familiarize with using Terraform modules to streamline infrastructure as code.
