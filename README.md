@@ -27,8 +27,8 @@ This assignment aims to create an EC2 instance, a VPC, and all necessary network
 By completing this assignment, learners will gain practical experience in using Terraform to provision and manage cloud infrastructure. Learners will learn how to dynamically fetch resources, utilize modules to organize and simplify Terraform code, and establish secure connections to learners' instances.
 
 # References:
-Networking, VPC and more with Terraform Resources: https://github.com/luqmannnn/aws-networking-and-compute-tf
-Modules: https://github.com/luqmannnn/simple-tf-module
-EC2 instance module https://registry.terraform.io/modules/terraform-aws-modules/ec2-instance/aws/latest
-Security group module: https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws/latest
-VPC module: https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest
+- Networking, VPC and more with Terraform Resources: https://github.com/luqmannnn/aws-networking-and-compute-tf
+- Modules: https://github.com/luqmannnn/simple-tf-module
+- EC2 instance module https://registry.terraform.io/modules/terraform-aws-modules/ec2-instance/aws/latest
+- Security group module: https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws/latest
+- VPC module: https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest
